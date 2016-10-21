@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: java-dynamo-test
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: java-dynamo-test
+    spec:
+      containers:
+      - name: java-dynamo-test
+        image: ec2-52-59-88-164.eu-central-1.compute.amazonaws.com:30862/engelhardt/java-dynamo-test
